@@ -48,6 +48,8 @@ This repository provisions a **secure Windows Server on Azure** using Terraform 
 - ✅ Centralized logging with Log Analytics
 
 ## Architecture
+<img width="553" height="352" alt="image" src="https://github.com/user-attachments/assets/682df488-ca74-401f-ad97-d065319c0934" />
+
 - Azure VNet with isolated subnets
 - Azure Bastion (Standard SKU)
 - Windows Server 2022
