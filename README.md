@@ -54,6 +54,7 @@ This repository provisions a **secure Windows Server on Azure** using Terraform 
 - Windows Server 2022
 - NSG with zero inbound rules
 ### 🟦 Azure – RDP via Azure Bastion
+```bash
 ┌──────────────────────────────┐
 │        Admin / Engineer      │
 │  Azure Portal / Native RDP  │
@@ -75,7 +76,7 @@ This repository provisions a **secure Windows Server on Azure** using Terraform 
 │  - No inbound NSG rules      │
 │  - No agent required         │
 └──────────────────────────────┘
-
+```
 ## Prerequisites
 - Azure subscription
 - Azure CLI (`az login`)
