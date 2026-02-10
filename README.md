@@ -50,11 +50,12 @@ This repository provisions a **secure Windows Server on Azure** using Terraform 
 - ✅ Centralized logging with Log Analytics
 
 ## Architecture
-https://learn.microsoft.com/en-us/azure/bastion/media/private-only-deployment/private-only-architecture.png#lightbox
-https://learn.microsoft.com/en-us/azure/bastion/media/bastion-overview/architecture.png#lightbox
-https://learn.microsoft.com/en-us/azure/bastion/media/quickstart-developer/bastion-shared-pool.png
+  - **bastion Overview** https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
+  - **Bastion Private-Only-Architecture** https://learn.microsoft.com/en-us/azure/bastion/media/private-only-deployment/private-only-architecture.png#lightbox
+  - **Bastion Architecture**  https://learn.microsoft.com/en-us/azure/bastion/media/bastion-overview/architecture.png#lightbox
+  - **Bastion Bastion-Shared-Pool**  https://learn.microsoft.com/en-us/azure/bastion/media/quickstart-developer/bastion-shared-pool.png
 - Azure VNet with isolated subnets
-- Azure Bastion (Standard SKU) ```txt https://learn.microsoft.com/en-us/azure/bastion/bastion-sku-comparison ```
+- Azure Bastion (Standard SKU)  https://learn.microsoft.com/en-us/azure/bastion/bastion-sku-comparison 
 - Azure Bastion pricing combines hourly SKU charges with outbound data transfer costs. Billing starts from the moment Bastion is deployed, regardless of usage. https://azure.microsoft.com/en-us/pricing/details/azure-bastion/
 - Windows Server 2022
 - NSG with zero inbound rules
