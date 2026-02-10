@@ -82,6 +82,7 @@ This repository provisions a **secure Windows Server on Azure** using Terraform 
 - Terraform >= 1.5
 - Azure AD user object ID
 ### 📁 Repository Structure
+```bash
 terraform-azure-windows/
 ├── README.md
 ├── main.tf
@@ -98,7 +99,7 @@ terraform-azure-windows/
     ├── network/
     ├── windows-vm/
     └── bastion/
-
+```
 
 ## Usage
 
