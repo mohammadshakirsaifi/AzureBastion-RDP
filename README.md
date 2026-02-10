@@ -12,33 +12,33 @@ Azure – RDP via Azure Bastion
                           Terraform Apply
                                    │
          ┌─────────────────────────┴─────────────────────────┐
-         │                     Azure                          │
-         │                                                     │
-         │  ┌───────────────┐       ┌─────────────────────┐  │
-         │  │ Resource Group│──────▶│   Azure AD / RBAC    │  │
-         │  └───────────────┘       └─────────────────────┘  │
-         │                                                     │
-         │  ┌──────────────────────── VNET ─────────────────┐ │
-         │  │                                                 │ │
+         │                     Azure                         │
+         │                                                   │
+         │  ┌───────────────┐        ┌─────────────────────┐ │
+         │  │ Resource Group│──────▶│   Azure AD / RBAC   │ │
+         │  └───────────────┘        └─────────────────────┘ │
+         │                                                   │
+         │  ┌──────────────────────── VNET ────────────────┐ │
+         │  │                                              │ │ 
          │  │  ┌──────────────┐   ┌─────────────────────┐  │ │
          │  │  │ Workload     │   │ AzureBastionSubnet  │  │ │
          │  │  │ Subnet       │   │ (/26 mandatory)     │  │ │
          │  │  │              │   └──────────┬──────────┘  │ │
          │  │  │  ┌────────┐ │              │              │ │
-         │  │  │  │ Windows│◀┼──────────────┘              │ │
-         │  │  │  │ Server │ │   Bastion (PaaS)             │ │
-         │  │  │  │  VM    │ │   RDP over HTTPS              │ │
-         │  │  │  │ NO PIP │ │                               │ │
-         │  │  │  └────────┘ │                               │ │
-         │  │  │     ▲       │                               │ │
-         │  │  │     │       │                               │ │
-         │  │  │  NSG (No     │                               │ │
-         │  │  │  inbound)   │                               │ │
-         │  │  └─────────────┘                               │ │
-         │  └────────────────────────────────────────────────┘ │
-         │                                                     │
-         │  Logs → Azure Monitor / Log Analytics               │
-         └─────────────────────────────────────────────────────┘
+         │  │  │  │ Windows│◀┼──────────────┘             │ │
+         │  │  │  │ Server │ │   Bastion (PaaS)            │ │
+         │  │  │  │  VM    │ │   RDP over HTTPS            │ │
+         │  │  │  │ NO PIP │ │                             │ │
+         │  │  │  └────────┘ │                             │ │
+         │  │  │     ▲       │                             │ │
+         │  │  │     │       │                             │ │
+         │  │  │  NSG (No     │                            │ │
+         │  │  │  inbound)   │                             │ │
+         │  │  └─────────────┘                             │ │
+         │  └──────────────────────────────────────────────┘ │
+         │                                                   │
+         │  Logs → Azure Monitor / Log Analytics             │
+         └───────────────────────────────────────────────────┘
 
 This repository provisions a **secure Windows Server on Azure** using Terraform with:
 
@@ -57,13 +57,13 @@ This repository provisions a **secure Windows Server on Azure** using Terraform 
 ```bash
 ┌──────────────────────────────┐
 │        Admin / Engineer      │
-│  Azure Portal / Native RDP  │
+│  Azure Portal / Native RDP   │
 └──────────────┬───────────────┘
                │ HTTPS (443)
                ▼
 ┌──────────────────────────────┐
 │       Azure Bastion          │
-│   (Managed PaaS Service)    │
+│   (Managed PaaS Service)     │
 │ - Azure AD + RBAC            │
 │ - Session recording          │
 │ - Runs in VNet               │
