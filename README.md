@@ -122,9 +122,28 @@ terraform apply
   RDP access is delivered via Azure Bastion over HTTPS, access is governed by Azure AD RBAC, and all activity is logged centrally.
   The design mirrors AWS Session Manager but follows Azure’s PaaS networking model.”
   ```
+# Project Security Overview
 
-## Note 📌 Critical  Line
-```txt
-“Security is enforced at the network and platform layer using managed PaaS.”
-“Bastion has a public IP, but the VM does not.”
-```
+##  📌 Critical Security Points
+
+1. **Security Layering**  
+   Security is enforced at both the **network** and **platform** layers.
+
+2. **Managed Services**  
+   Security controls are applied using **managed PaaS services**.
+
+3. **Bastion Host Exposure**  
+   The **bastion host** has a **public IP**, allowing external access.
+
+4. **VM Isolation**  
+   The **VM does not have a public IP**, ensuring it remains private.
+
+5. **Access Path**  
+   All access to the VM is routed **through the bastion host** for controlled entry.
+
+## Summary
+- Managed PaaS handles security at multiple layers.  
+- The VM remains isolated with no direct public exposure.  
+- The bastion acts as a secure gateway for access.
+
+
