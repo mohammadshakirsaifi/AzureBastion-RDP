@@ -1,11 +1,8 @@
 # AzureBastion-RDP
 Azure – RDP via Azure Bastion
-```txt
-“We provision the entire Windows Server stack using Terraform, starting with networking, enforcing no public IPs and no inbound RDP.
-Administrative access is provided through Azure Bastion, which acts as a managed RDP proxy over HTTPS.
-Access is controlled via Azure AD RBAC, and all activity is logged to Azure Monitor.
-This achieves the same security outcome as AWS Session Manager while aligning with Azure’s PaaS-first model.”
-```
+
+###### We provision the entire Windows Server stack using Terraform, starting with networking, enforcing no public IPs and no inbound RDP. Administrative access is provided through Azure Bastion, which acts as a managed RDP proxy over HTTPS. Access is controlled via Azure AD RBAC, and all activity is logged to Azure Monitor. This achieves the same security outcome as AWS Session Manager while aligning with Azure’s PaaS-first model.
+
 # Terraform Azure Windows Server (No Public RDP)
                     ┌─────────────────────────────┐
                     │        Admin / DevOps        │
