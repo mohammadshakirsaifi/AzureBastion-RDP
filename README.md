@@ -1,5 +1,7 @@
 # Azure – RDP via Azure Bastion
 
+######  Azure Bastion is a fully managed PaaS service that provides secure and seamless RDP/SSH connectivity to your virtual machines directly over TLS from the Azure portal, or via the native SSH or RDP client already installed on your local computer. Azure Bastion is deployed directly in your virtual network and supports all VMs in the virtual network using private IP addresses. When you connect via Azure Bastion, your virtual machines don't need a public IP address, agent, or special client software.
+
 ###### We provision the entire Windows Server stack using Terraform, starting with networking, enforcing no public IPs and no inbound RDP. Administrative access is provided through Azure Bastion, which acts as a managed RDP proxy over HTTPS. Access is controlled via Azure AD RBAC, and all activity is logged to Azure Monitor. This achieves the same security outcome as AWS Session Manager while aligning with Azure’s PaaS-first model.
 
 # Terraform Azure Windows Server (No Public RDP)
@@ -48,10 +50,12 @@ This repository provisions a **secure Windows Server on Azure** using Terraform 
 - ✅ Centralized logging with Log Analytics
 
 ## Architecture
-<img width="553" height="352" alt="image" src="https://github.com/user-attachments/assets/682df488-ca74-401f-ad97-d065319c0934" />
-
+https://learn.microsoft.com/en-us/azure/bastion/media/private-only-deployment/private-only-architecture.png#lightbox
+https://learn.microsoft.com/en-us/azure/bastion/media/bastion-overview/architecture.png#lightbox
+https://learn.microsoft.com/en-us/azure/bastion/media/quickstart-developer/bastion-shared-pool.png
 - Azure VNet with isolated subnets
-- Azure Bastion (Standard SKU)
+- Azure Bastion (Standard SKU) ```txt https://learn.microsoft.com/en-us/azure/bastion/bastion-sku-comparison ```
+- Azure Bastion pricing combines hourly SKU charges with outbound data transfer costs. Billing starts from the moment Bastion is deployed, regardless of usage. https://azure.microsoft.com/en-us/pricing/details/azure-bastion/
 - Windows Server 2022
 - NSG with zero inbound rules
 ### 🟦 Azure – RDP via Azure Bastion
